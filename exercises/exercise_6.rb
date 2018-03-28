@@ -18,13 +18,6 @@ puts "----------"
 # Go ahead and create some more employees using the create method. You can do this by making multiple calls to create (like you have before.) No need to assign the employees to variables though. Create them through the @store# instance variables that you defined in previous exercises. Create a bunch under @store1 (Burnaby) and @store2 (Richmond). Eg: @store1.employees.create(...).
 
 
-class Store < ActiveRecord::Base
-  has_many :employees
-end
- 
-class Employee < ActiveRecord::Base
-  belongs_to :store
-end
 
 @store1.employees.create(first_name: "Miguel", last_name: "West", hourly_rate: 20)
 @store1.employees.create(first_name: "Brett", last_name: "Marshall", hourly_rate: 30)
